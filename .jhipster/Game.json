@@ -1,0 +1,29 @@
+{
+    "name": "Game",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gameCommission",
+            "otherEntityRelationshipName": "game",
+            "relationshipName": "gameCommission",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200328134000",
+    "entityTableName": "game",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
