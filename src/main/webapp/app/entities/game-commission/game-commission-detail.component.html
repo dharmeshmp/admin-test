@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="gameCommission">
+            <h2><span>Game Commission</span> {{ gameCommission.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Commission</span></dt>
+                <dd>
+                    <span>{{ gameCommission.commission }}</span>
+                </dd>
+                <dt><span>Game User</span></dt>
+                <dd>
+                    <div *ngIf="gameCommission.gameUser">
+                        <a [routerLink]="['/game-user', gameCommission.gameUser?.id, 'view']">{{ gameCommission.gameUser?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span>Game</span></dt>
+                <dd>
+                    <div *ngIf="gameCommission.game">
+                        <a [routerLink]="['/game', gameCommission.game?.id, 'view']">{{ gameCommission.game?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/game-commission', gameCommission.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>
