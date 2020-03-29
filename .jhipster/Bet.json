@@ -1,0 +1,36 @@
+{
+    "name": "Bet",
+    "fields": [
+        {
+            "fieldName": "chips",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gameUser",
+            "otherEntityRelationshipName": "bet",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hand",
+            "otherEntityRelationshipName": "bet",
+            "relationshipName": "hand",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200329105400",
+    "entityTableName": "bet",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
