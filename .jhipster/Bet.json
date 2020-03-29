@@ -1,0 +1,29 @@
+{
+    "name": "Bet",
+    "fields": [
+        {
+            "fieldName": "chips",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hand",
+            "otherEntityRelationshipName": "bet",
+            "relationshipName": "hand",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200329102600",
+    "entityTableName": "bet",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

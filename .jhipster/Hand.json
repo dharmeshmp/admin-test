@@ -1,0 +1,36 @@
+{
+    "name": "Hand",
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "HandStatus",
+            "fieldValues": "Begin,End"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bet",
+            "otherEntityRelationshipName": "hand",
+            "relationshipName": "bet"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "hand",
+            "relationshipName": "game",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200329102700",
+    "entityTableName": "hand",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
