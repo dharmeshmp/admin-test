@@ -1,0 +1,21 @@
+{
+    "name": "Bet",
+    "fields": [
+        {
+            "fieldName": "chips",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200329101800",
+    "entityTableName": "bet",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
