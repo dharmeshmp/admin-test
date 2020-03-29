@@ -1,0 +1,29 @@
+entity GameUser {
+	username String
+    password String
+}
+
+entity GameCommission {
+	commission Integer
+}
+
+entity Game {
+	name String
+}
+
+entity Bet {
+	chips Integer
+}
+
+entity Hand {
+	
+}
+
+relationship ManyToOne {
+	Hand{game} to Game
+    GameCommission to Game
+}
+
+relationship OneToMany {
+	GameUser{commission} to GameCommission    
+}
