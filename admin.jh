@@ -1,0 +1,46 @@
+entity GameUser {
+	username String
+    password String
+    chips BigDecimal
+}
+
+entity Role {
+	name String
+}
+
+relationship ManyToOne {
+	GameUser{role} to Role
+}
+
+entity GameCommission {
+	commission Integer
+}
+
+entity Game {
+	name String
+}
+
+entity Bet {
+	chips BigDecimal
+}
+
+entity Hand {
+	status HandStatus
+    winningChips BigDecimal
+}
+
+enum HandStatus {
+	Begin, End
+}
+
+relationship ManyToOne {
+	Hand{game} to Game
+    GameCommission{game} to Game
+    Bet{user} to GameUser
+    Hand{winner} to GameUser
+}
+
+relationship OneToMany {
+	GameUser{commission} to GameCommission
+    Hand{bet} to Bet{hand}
+}

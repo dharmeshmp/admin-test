@@ -1,0 +1,36 @@
+{
+    "name": "GameCommission",
+    "fields": [
+        {
+            "fieldName": "commission",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "gameCommission",
+            "relationshipName": "game",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gameUser",
+            "otherEntityRelationshipName": "commission",
+            "relationshipName": "gameUser",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200329105200",
+    "entityTableName": "game_commission",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
