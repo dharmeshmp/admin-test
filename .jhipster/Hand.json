@@ -1,0 +1,24 @@
+{
+    "name": "Hand",
+    "fields": [],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "hand",
+            "relationshipName": "game",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200329101400",
+    "entityTableName": "hand",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
