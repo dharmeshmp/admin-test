@@ -1,0 +1,47 @@
+{
+    "name": "Hand",
+    "fields": [
+        {
+            "fieldName": "status",
+            "fieldType": "HandStatus",
+            "fieldValues": "Begin,End"
+        },
+        {
+            "fieldName": "winningChips",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "bet",
+            "otherEntityRelationshipName": "hand",
+            "relationshipName": "bet"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "game",
+            "otherEntityRelationshipName": "hand",
+            "relationshipName": "game",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gameUser",
+            "otherEntityRelationshipName": "hand",
+            "relationshipName": "winner",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200401030900",
+    "entityTableName": "hand",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
