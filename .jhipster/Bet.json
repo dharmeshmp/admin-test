@@ -1,0 +1,41 @@
+{
+    "name": "Bet",
+    "fields": [
+        {
+            "fieldName": "chips",
+            "fieldType": "BigDecimal"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "BetStatus",
+            "fieldValues": "Start,Finish,Cancel"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gameUser",
+            "otherEntityRelationshipName": "bet",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "hand",
+            "otherEntityRelationshipName": "bet",
+            "relationshipName": "hand",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200401030800",
+    "entityTableName": "bet",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

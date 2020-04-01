@@ -1,0 +1,50 @@
+{
+    "name": "GameUser",
+    "fields": [
+        {
+            "fieldName": "username",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "password",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "chips",
+            "fieldType": "BigDecimal"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "gameCommission",
+            "otherEntityRelationshipName": "gameUser",
+            "relationshipName": "commission"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "role",
+            "otherEntityRelationshipName": "gameUser",
+            "relationshipName": "role",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "gameUser",
+            "otherEntityRelationshipName": "gameUser",
+            "relationshipName": "parent",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200401030400",
+    "entityTableName": "game_user",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
